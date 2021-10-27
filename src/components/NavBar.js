@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import PropTypes from "prop-types";
 
 export class NavBar extends Component {
-//   static propTypes = {};
+  //   static propTypes = {};
 
   render() {
     return (
@@ -37,6 +37,87 @@ export class NavBar extends Component {
                   <a className="nav-link" href="/">
                     About
                   </a>
+                </li>
+                {/* <li className="nav-item">
+                  <a className="nav-link" href="/">
+                    business
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/">
+                    entertainment
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/">
+                    general
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/">
+                    health
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/">
+                    science
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/">
+                    sports
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/">
+                    technology
+                  </a>
+                </li> */}
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Select Category
+                  </a>
+                  <div
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <a className="dropdown-item" href="/">
+                      business
+                    </a>
+                    <div className="dropdown-divider"></div>
+                    <a className="dropdown-item" href="/">
+                      entertainment
+                    </a>
+                    <div className="dropdown-divider"></div>
+                    <a className="dropdown-item" href="/">
+                      general
+                    </a>
+                    <div className="dropdown-divider"></div>
+                    <a className="dropdown-item" href="/">
+                      health
+                    </a>
+                    <div className="dropdown-divider"></div>
+                    <a className="dropdown-item" href="/">
+                      sports
+                    </a>
+                    <div className="dropdown-divider"></div>
+                    <div className="dropdown-divider"></div>
+                    <a className="dropdown-item" href="/">
+                      science
+                    </a>
+                    <div className="dropdown-divider"></div>
+                    <a className="dropdown-item" href="/">
+                      technology
+                    </a>
+                  </div>
                 </li>
               </ul>
             </div>
