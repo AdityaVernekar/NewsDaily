@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class NewsItem extends Component {
-  render() {
-    let { title, description, imageUrl, newsUrl, author, date, source } = this.props;
+const NewsItem =(props)=>{
+ 
+    let { title, description, imageUrl, newsUrl, author, date, source } =props;
     return (
       <div className="my-4">
         <div className="card">
@@ -10,7 +10,7 @@ export class NewsItem extends Component {
                         justifycontent: "flex-end",
                         position: "absolute",
                         right: 0}}>
-         <span class=" badge rounded-pill bg-danger" style={{left:"90%",zIndex:1}}>
+         <span className=" badge rounded-pill bg-danger" style={{left:"90%",zIndex:1}}>
             {source}
           </span>
          </div>
@@ -19,14 +19,17 @@ export class NewsItem extends Component {
             src={
               imageUrl
                 ? imageUrl
-                : "https://st1.bgr.in/wp-content/uploads/2021/10/PUBG-New-State-1.jpg"
+                : "https://salautomotive.in/wp-content/uploads/2017/01/no-image-available.jpg"
             }
             className="card-img-top"
             alt="..."
           />
           <div className="card-body">
-            <h5 className="card-title">{title.length>70?title.slice(0,70)+"...":title}</h5>
-            <p className="card-text">{description}</p>
+            <h5 className="card-title">
+              {/* {title.length>70?title.slice(0,70)+"...":title} */}
+              {title}
+              </h5>
+            <p className="card-text">{description===null?"No Description":description.length>120?description.slice(0,120)+"...":description}</p>
             <p className="card-text">
               <small className="text-primary">
                 By {author ? author : "Unknown"} on{" "}
@@ -45,7 +48,7 @@ export class NewsItem extends Component {
         </div>
       </div>
     );
-  }
+  
 }
 
 export default NewsItem;
